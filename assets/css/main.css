@@ -1,0 +1,10 @@
+@font-face{
+    font-family : LeagueSpartan;
+    src: url("../fonts/LeagueSpartan-Bold.woff") format ("woff");
+    src: url("../fonts/LeagueSpartan-Bold.woff2") format ("woff2");
+}
+
+#name {
+    font-family: LeagueSpartan;
+    font-weight: bold;
+}
