@@ -68,8 +68,8 @@ p{
 
 .main-btn{
     background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
-    background-size: 100%;
-    background-position: 0%;
+    background-size: 400%;
+
     border: none;
     border-radius: 0px;
     color:#ffffff;
@@ -79,14 +79,14 @@ p{
 
 /*  Pseudo-classes */
 .main-btn:hover{
-    animation: gr 6s ease-out 0s alternate infinite running;
-    -webkit-animation: gr 6s ease-out 0s alternate infinite running;
-	-moz-animation: gr 6s ease-out 0s alternate infinite running;
+    animation: gr 9s ease infinite ;
+    -webkit-animation: gr 9s ease infinite;
+	-moz-animation: gr 9s ease infinite;
 
 }
 
 #name:hover{
-    transform: scale(0.4);
+    transform: scale(1.05);
 
 }
 
