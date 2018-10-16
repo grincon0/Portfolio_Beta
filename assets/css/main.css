@@ -51,6 +51,15 @@ p{
     font-family: 'Barlow Condensed', sans-serif;
 }
 
+#main-btn{
+    background: linear-gradient(#e66465, #9198e5);
+    border: none;
+    border-radius: 0px;
+    color:rgb(231, 231, 231);
+    text-decoration: none;
+    
+}
+
 /*  Pseudo-classes */
 
 /*  Animations   */
