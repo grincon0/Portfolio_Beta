@@ -1,10 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Didact+Gothic|Open+Sans|Roboto');
+
+
 @font-face{
     font-family : LeagueSpartan;
     src: url("../fonts/LeagueSpartan-Bold.woff") format ("woff");
     src: url("../fonts/LeagueSpartan-Bold.woff2") format ("woff2");
 }
 
-#name {
-    font-family: LeagueSpartan;
-    font-weight: bold;
+
+
+
+/* Elements */
+
+body{
+    background-color:rgb(13, 10, 20);
 }
+
+p{
+
+    color: #E7DFDD;
+}
+
+
+/* Classes*/
+.main-clr {
+    background-color: #0E0B16;
+}
+
+.sec-clr {
+    background-color: #A239CA;
+
+}
+
+.btn-clr{
+    background-color: #4717F6;
+}
+
+.font-clr{
+    color: #E7DFDD;
+}
+
+/* IDs */
+
+#name {
+    color: rgb(247, 231, 228);
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+#sub-name{
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+/*  Pseudo-classes */
+
+/*  Animations   */
