@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Didact+Gothic|Open+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Didact+Gothic|Old+Standard+TT|Open+Sans|Roboto');
 
 
 @font-face{
@@ -27,6 +27,16 @@ p{
     background-color: #0E0B16;
 }
 
+.navbar {
+    background: rgb(8, 8, 10);
+}
+
+.page-mover{
+    font-family: 'Old Standard TT', 'cursive';
+    font-size: 18px;
+    color: rgb(204, 196, 194);
+}
+
 .sec-clr {
     background-color: #A239CA;
 
@@ -40,26 +50,65 @@ p{
     color: #E7DFDD;
 }
 
+
+
 /* IDs */
 
 #name {
     color: rgb(247, 231, 228);
     font-family: 'Didact Gothic', sans-serif;
+    font-size: 48px;
+    transition: transform 0.5s ease;
 }
 
 #sub-name{
+    font-size: 18px;
     font-family: 'Barlow Condensed', sans-serif;
 }
 
-#main-btn{
-    background: linear-gradient(#e66465, #9198e5);
+.main-btn{
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+    background-size: 100%;
+    background-position: 0%;
     border: none;
     border-radius: 0px;
-    color:rgb(231, 231, 231);
+    color:#ffffff;
     text-decoration: none;
-    
+    padding: 10px 15px;
 }
 
 /*  Pseudo-classes */
+.main-btn:hover{
+    animation: gr 6s ease-out 0s alternate infinite running;
+    -webkit-animation: gr 6s ease-out 0s alternate infinite running;
+	-moz-animation: gr 6s ease-out 0s alternate infinite running;
+
+}
+
+#name:hover{
+    transform: scale(0.4);
+
+}
 
 /*  Animations   */
+
+@-webkit-keyframes gr {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+
+}
+
+@-moz-keyframes gr {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+
+
+}
+@keyframes gr {
+    0% {background-position: 0% 50%}
+    50% {background-position: 100% 50%}
+    100% {background-position: 0% 50%}
+}
+
