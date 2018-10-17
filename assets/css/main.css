@@ -11,7 +11,9 @@
 
 
 /* Elements */
-
+html{
+    scroll-behavior: smooth;
+}
 body{
     background-color:rgb(13, 10, 20);
 }
@@ -45,7 +47,23 @@ p{
     font-family: 'Old Standard TT', 'cursive';
     font-size: 18px;
     color: rgb(204, 196, 194);
+    margin-bottom: 15px;
 
+}
+
+.port-box{
+    height: 300px;
+    width: 500px;
+    float: left;
+    margin: 20px;
+}
+
+.port-header{
+text-align: center;
+}
+
+.row-buffer{
+    margin: 3px 10px;
 }
 
 .sec-clr {
@@ -54,7 +72,7 @@ p{
 }
 
 .emp-space{
-    height:300px;
+    height:310px;
 }
 
 
@@ -73,12 +91,33 @@ p{
     margin-top: 170px;
 }
 
+/*  Test Classes */
+
 .test-1{
     background-color: #23D5AB;
 }
 
 .test-2{
     background-color: #199c7e;
+}
+.test-3{
+    background-color: #a4ffea;
+}
+
+.test-4{
+    background-color: #799992;
+}
+
+.test-5{
+    background-color: #4c6963;
+}
+
+.test-6{
+    background-color: #2a3d39;
+}
+
+.test-7{
+    background-color: #a8ce00;
 }
 
 .str-to-wrap{
@@ -110,16 +149,23 @@ p{
 
 
 #wrapper{
-    width: 1024px;
+    width: 1000px;
 }
 
+
+.blk-test{
+    width: 1519px;
+
+}
 .main-btn{
     background: linear-gradient(-45deg, rgb(255, 127, 88), #E73C7E, #23A6D5, #23D5AB);
     background-size: 400%;
     border: none;
     border-radius: 0px;
     color:#ffffff;
+    margin: 20px 0;
     text-decoration: none;
+
     padding: 8px 20px;
 }
 
