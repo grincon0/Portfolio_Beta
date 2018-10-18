@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Didact+Gothic|Old+Standard+TT|Open+Sans|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Didact+Gothic|Old+Standard+TT|Open+Sans|Bree+Serif|Roboto');
 
 
 @font-face{
@@ -51,15 +51,79 @@ p{
 
 }
 
-.port-box{
+
+.pet-perfectDiv{
+    background-image: url('../img/pet-perfect/adults.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.port-title .port-desc .port-num{
+    z-index: 5;
+}
+
+.port-box {
     height: 300px;
     width: 500px;
     float: left;
     margin: 20px;
 }
 
+.port-box-cover{
+    height: 300px;
+    width: 500px;
+    background-color: rgb(21, 0, 95);
+    position: relative;
+    top: 20px;
+    left: 20px;
+    opacity: 0;
+    z-index:2;
+
+}
+
 .port-header{
-text-align: center;
+    text-align: center;
+    text-decoration: none;
+}
+.port-title-loc{
+    position: relative;
+    top:40%;
+}
+.port-desc-loc{
+    position: relative;
+    top:50%;
+}
+
+
+.port-div{
+    position: relative;
+    top: 40%;
+    transition: transform 0.2s ease-in
+}
+
+.port-title{
+    color: rgb(255, 245, 242);
+    font-family: 'Bree Serif', serif;
+    margin-left: 30px;
+    position: relative;
+    top:60%;
+    transition: transform 0.5s ease;
+}
+
+.port-desc{
+    font-family: 'Bree Serif', serif;
+    font-style: italic;
+    margin-left: 35px;
+    
+    position: relative;
+    top:60%;
+    transition: transform 0.5s ease;
+}
+.port-num h2{
+    
+    font-size: 65px;
+    position: relative;
+    left: 60%;
 }
 
 .row-buffer{
@@ -88,7 +152,7 @@ text-align: center;
 }
 
 .name-top{
-    margin-top: 170px;
+    margin-top: 160px;
 }
 
 /*  Test Classes */
@@ -124,9 +188,6 @@ text-align: center;
     width:100%;
 }
 
-
-
-
 /* IDs */
 
 
@@ -137,7 +198,8 @@ text-align: center;
 #name {
     color: rgb(247, 231, 228);
     font-family: 'Didact Gothic', sans-serif;
-    font-size: 48px;
+    font-size: 64px;
+    font-weight: bold;
     transition: transform 0.5s ease;
 }
 
@@ -177,10 +239,24 @@ text-align: center;
 
 }
 
+
+
 #name:hover{
     transform: scale(1.03);
 
 }
+
+
+
+.port-div:hover{
+    transform: scale(1.03);
+}
+.port-box-cover:hover{
+    opacity: 0.7;
+    animation: move 0.4s ease-in 0.1s  normal forwards;
+}
+
+
 
 /*  Animations   */
 
@@ -203,4 +279,16 @@ text-align: center;
     50% {background-position: 100% 50%}
     100% {background-position: 0% 50%}
 }
+
+
+@keyframes move {
+    from{
+        transform: translateX(0px)
+    }
+    to{
+        transform: translateX(700px);
+
+    }
+}
+
 
