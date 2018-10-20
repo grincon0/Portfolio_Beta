@@ -40,9 +40,6 @@ p{
     background-color: #0E0B16;
 }
 
-.navbar {
-    background: rgb(8, 8, 10);
-}
 
 .name-top::before{
     content:"";
@@ -191,7 +188,7 @@ p{
 
 
 .port-back-color{
-    background-color: rgb(120, 250, 200);
+    background:linear-gradient(90deg, #dadada, #e7e7e7);
 }
 
 /*  Test Classes */
