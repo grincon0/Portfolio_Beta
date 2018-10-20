@@ -11,6 +11,7 @@
 
 
 /* Elements */
+
 html{
     scroll-behavior: smooth;
 }
@@ -58,10 +59,17 @@ p{
     background-size: cover;
 }
 
+/*
 .port-title, .port-desc, .port-num{
     z-index: 5;
 }
 
+*/
+.port-box::before{
+    content: "";
+    background-color: #A239CA;
+   
+}
 .port-box {
     height: 300px;
     width: 500px;
@@ -70,19 +78,26 @@ p{
     -webkit-box-shadow: 3px 3px 5px 6px rgb(68, 68, 68);  
     -moz-box-shadow:    3px 3px 5px 6px rgb(110, 110, 110); 
     box-shadow:         3px 3px 5px 6px rgb(80, 79, 79);
-    z-index:2;
+    z-index:1;
 }
 
 .port-box-cover{
+    content:"";
     height: 300px;
-    width: 500px;
-    background-color: rgb(21, 0, 95);
-    position: relative;
-    top: 20px;
-    left: 20px;
-    opacity: 0;
-    z-index:1;
+    background: linear-gradient(45deg, rgba(20, 0, 110, 0.582), rgba(0, 0, 131));
+    position: absolute;
+    top:20px;
+    overflow: hidden;
+    width: 0;
 
+
+}
+.blanket{
+    background-color: #a8ce00;
+    content: "g";
+    height:100%;
+    width:100%;
+    z-index: 99;
 }
 
 .port-header{
@@ -111,7 +126,7 @@ p{
     margin-left: 30px;
     position: relative;
     top:60%;
-    transition: transform 0.5s ease;
+  
 }
 
 .port-desc{
@@ -121,13 +136,17 @@ p{
     
     position: relative;
     top:60%;
-    transition: transform 0.5s ease;
+ 
 }
 .port-num h2{
     
     font-size: 65px;
     position: relative;
     left: 60%;
+}
+
+.port-overlap{
+    z-index: 5;
 }
 
 .row-buffer{
@@ -256,14 +275,21 @@ p{
 }
 
 
-
+/*
 .port-div:hover{
     transform: scale(1.03);
 }
-.port-box-cover:hover{
+*/
+
+.port-box:hover .port-box-cover{
     
-    animation: move 0.3s forwards;
+    animation: slideright  0.3s forwards;
+    /*
+               grow 0.2s 0.4s forwards;
+               */
+                    
 }
+
 
 
 
@@ -297,10 +323,33 @@ p{
 
     }
     to{
-        opacity: 0.6;
+        opacity: 0.95;
         transform: translateX(0%);
 
 
+    }
+}
+
+@keyframes slideright {
+    from{
+        opacity: 0.0;
+        width: 0%;
+
+    }
+    to{
+        opacity: 0.95;
+        width: 68.2%;
+
+
+    }
+}
+
+@keyframes grow {
+    from{
+        transform: scale(1.00);
+    }
+    to{
+        transform: scale(1.05);
     }
 }
 
