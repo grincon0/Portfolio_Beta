@@ -48,7 +48,7 @@ p{
     position: absolute;
     overflow: hidden;
     width: 50%;
-    animation: namefade 1.1s 0.8s ease-out forwards;
+    animation: namefade 1.1s 3s ease-out forwards;
 }
 
 .page-mover{
@@ -78,22 +78,24 @@ p{
    
 }
 .port-box {
-    height: 300px;
-    width: 500px;
+    height: 500px;
+    width: 750px;
     float: left;
     margin: 20px;
     -webkit-box-shadow: 3px 3px 5px 6px rgb(68, 68, 68);  
     -moz-box-shadow:    3px 3px 5px 6px rgb(110, 110, 110); 
     box-shadow:         3px 3px 5px 6px rgb(80, 79, 79);
     z-index:1;
+    position: relative;
+    left: 20%;
 }
 
 .port-box-cover{
     content:"";
-    height: 300px;
+    height: 100%;
     background: linear-gradient(45deg, #1d1a1a94, #83003d);
     position: absolute;
-    top:20px;
+    top: 0;
     overflow: hidden;
     width: 0;
     transition: .2s ease-out;
@@ -124,7 +126,9 @@ p{
 
 .port-div{
     position: relative;
-    top: 40%;
+    top: 60%;
+    
+    transform-origin:bottom left;
     transition: transform 0.2s 0.3s ease;
 }
 
@@ -253,7 +257,7 @@ p{
     position: absolute;
     overflow: hidden;
     width: 50%;
-    animation: namefade 1.2s 0.8s ease-out forwards;
+    animation: namefade 1.2s 3s ease-out forwards;
 }
 
 
@@ -276,6 +280,7 @@ p{
     margin: 20px 0;
     text-decoration: none;
     padding: 8px 20px;
+    transition: transform 0.5s ease;
 }
 
 
@@ -292,10 +297,12 @@ p{
     position: absolute;
     overflow: hidden;
     width: 50%;
-    animation: namefade 1.26s 0.8s ease-out forwards;
+    animation: namefade 1.26s 3s ease-out forwards;
 
 }
 .main-btn:hover{
+    border-radius: 4px;
+    transform: scale(1.11);
     animation: gr 6s ease-out alternate infinite ;
     -webkit-animation: gr 6s ease-out alternate infinite;
 	-moz-animation: gr 6s ease-out alternate infinite;
@@ -310,14 +317,14 @@ p{
 */
 
 .port-box:hover .port-box-cover{
-    width: 68.2%;
+    width: 100%;
     /*
     animation: slideright  0.3s forwards;   
     */ 
 }
 
 .port-box:hover .port-div{
-    transform: scale(1.05);
+    transform: scale(1.30);
     /*
     animation: grow 0.2s 0.4s forwards;
     */
@@ -385,6 +392,7 @@ p{
         transform: scale(1.05);
     }
 }
+
 
 @keyframes namefade{
     from{
