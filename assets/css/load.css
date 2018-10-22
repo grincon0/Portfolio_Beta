@@ -14,7 +14,7 @@
 }
 
 .to-be-loaded{
-    display: hidden;
+    display: none;
 }
 
 .column{
@@ -85,6 +85,13 @@
 .portfolio-block{
     height: 0;
 }
+/*
+#port-sec, .pet-perfectDiv, .port-div, .port-title{
+    height:0;
+    font-size: 0%;
+}
+
+*/
 
 
 @keyframes pulse {

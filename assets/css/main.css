@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed|Didact+Gothic|Old+Standard+TT|Open+Sans|Bree+Serif|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:700');
 
 
 @font-face{
@@ -82,12 +83,14 @@ p{
     width: 750px;
     float: left;
     margin: 20px;
+    margin-bottom: 100px;
     -webkit-box-shadow: 3px 3px 5px 6px rgb(68, 68, 68);  
     -moz-box-shadow:    3px 3px 5px 6px rgb(110, 110, 110); 
     box-shadow:         3px 3px 5px 6px rgb(80, 79, 79);
     z-index:1;
     position: relative;
     left: 20%;
+    padding-bottom: 30px;
 }
 
 .port-box-cover{
@@ -162,7 +165,7 @@ p{
 }
 
 .row-buffer{
-    margin: 3px 10px;
+    margin: 3px 3px;
 }
 
 .sec-clr {
@@ -191,9 +194,6 @@ p{
 }
 
 
-.port-back-color{
-    background:linear-gradient(90deg, #dadada, #e7e7e7);
-}
 
 /*  Test Classes */
 
@@ -238,12 +238,24 @@ p{
 #name {
     display: block;
     color: rgb(247, 231, 228);
-    font-family: 'Didact Gothic', sans-serif;
+    font-family: 'Work Sans', sans-serif;
     font-size: 64px;
     font-weight: bold;
+    font-stretch: expanded;
     
 }
 
+#sec{
+    width: 1515px;
+    margin:0;
+    padding: 0;
+    background:linear-gradient(90deg, #dadada, #e7e7e7);
+}
+
+#port-sec{
+    width: 100%;
+    background:linear-gradient(90deg, #dadada, #e7e7e7);
+}
 #sub-name{
     color: #dfcfcc;
     font-family: 'Barlow Condensed', sans-serif;
@@ -268,7 +280,7 @@ p{
 
 
 .blk-test{
-    width: 1519px;
+    width: 1500px;
 
 }
 .main-btn{
