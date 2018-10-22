@@ -13,6 +13,7 @@ $(document).ready(function () {
     setTimeout(function () {
         $("#port-sec").removeAttr("class", "to-be-loaded");
     }, 2100);
+    letterMagic.setLayout();
     letterMagic.init();
 });
 
@@ -82,15 +83,6 @@ const letterMagic = {
 
     }
 }
-
-
-letterMagic.setLayout();
-
-
-const specialChars = ['▓', '▒', '░', '█', '╪', 'Ω', 'ε', '≈', 'Σ', '¶',
-    '…', 'ø', '▒', 'Γ', 'δ', 'Θ', '§', '9', '+', '/', ']', '&', '#',
-    , '@', '!', '%'];
-
 
 
 
