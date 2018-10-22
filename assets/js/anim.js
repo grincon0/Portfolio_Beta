@@ -78,7 +78,7 @@ const letterMagic = {
 
             }
             time++;
-        }, 60);
+        }, 44);
 
     }
 }
