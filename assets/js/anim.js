@@ -59,8 +59,7 @@ const letterMagic = {
                     let boo = a.layout.join('');
                     $('#sub-name').text(boo);
                     b++;
-                    console.log(b);
-                    
+    
                 
                 isWordComplete = true;
 
