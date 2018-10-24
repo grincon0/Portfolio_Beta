@@ -18,6 +18,8 @@ html{
 }
 body{
     background-color:rgb(13, 10, 20);
+    overflow-x: hidden;
+    
 }
 
 p{
@@ -183,6 +185,9 @@ p{
     left:50%;
 }
 
+.none{
+    display: none;
+}
 .lowfy{
     display: block;
     position: relative;

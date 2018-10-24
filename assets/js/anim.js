@@ -10,18 +10,23 @@ const stateCheck = setInterval(function () {
 
 
 $(document).ready(function () {
+    $(".main-btn").on("click", function (){
+        toggleAbout();
+
+    });
+
     setTimeout(function () {
         $("#port-sec").removeAttr("class", "to-be-loaded");
     }, 2100);
+
     letterMagic.setLayout();
     letterMagic.init();
+
 });
 
-
-
 const letterMagic = {
-    specialChars: ['▓', '▒', '░', '█', '╪', 'Ω', 'ε', 'Σ', '¶',
-        '…', 'ø', '▒', 'Γ', 'δ', 'Θ', '§', '+', '/', '#',
+    specialChars: ['▓', '▒', '░', '█', '╪', 'Ω', '█', 'Σ', '¶',
+        '░', 'ø', '▒', 'Γ', 'δ', 'Θ', '▒', '+', '/', '#',
         , '@', '!', '%', '░', '▓'],
     layout: [],
     normal: 'Full Stack Developer',
@@ -71,19 +76,31 @@ const letterMagic = {
                     a.layout[p] = a.specialChars[a.getRndChar()];
                     let text = a.layout.join('');
                     $("#sub-name").text(text);
-        
-                }
-                
-        
-
+                }               
             }
             time++;
-        }, 44);
+        }, 45);
 
     }
 }
 
 
+const btnActions = {
+    getCards : function () {
+        $(".main-btn").on("click", function (){
+            $(".about-card").attr('class', 'move-in-left');
+        });
+    }
+}
+
+
+const toggleAbout = () => {
+    $("#front-page").addClass('back-transparent');
+    $(".about-card").addClass('move-in-left')
+    $(".contact-card").addClass('move-smooth');
+    $(".contact-card").addClass('move-in-right');
+    $(".body").addClass('stop-scroll-y');
+}
 
 
 
