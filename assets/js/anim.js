@@ -100,6 +100,7 @@ const btnActions = {
 const toggleAbout = () => {
 
     if(hasBeenToggled){
+        $("#front-page").removeClass('back-fade-in');
         $(".about-card").removeClass('back-transparent move-in-right');
         $(".contact-card").removeClass('back-transparent move-in-left');
         $(".about-card").addClass('back-fade-in');
