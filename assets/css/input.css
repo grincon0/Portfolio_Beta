@@ -1,0 +1,43 @@
+.input-line{
+    border: 0;
+    border-radius: 0;
+    outline : 0;
+    text-decoration: none;
+    background: transparent;
+    border-bottom: 1px solid greenyellow;
+    margin: 15px 5px;
+
+}
+
+.input-line:focus{
+    border: 0;
+    border-radius: 0;
+    
+    background:transparent;
+    text-decoration: none;
+    outline: 0;
+    border-bottom: 1px solid greenyellow;
+
+}
+
+.input-line:active{
+    border: 0;
+    outline: 0;
+    text-decoration: 0;
+}
+
+.input-line:hover{
+    animation: change 1.5s forwards;
+}
+
+@keyframes change {
+    0%{
+        border-bottom: 1px solid greenyellow;
+    }
+    50%{
+        border-bottom: 1px solid hotpink;
+    }
+    100%{
+        border-bottom: 1px solid rgb(0, 217, 255);
+    }
+}
