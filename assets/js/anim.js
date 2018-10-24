@@ -8,13 +8,17 @@ const stateCheck = setInterval(function () {
 
 }, 100);
 
+let hasBeenToggled = false;
 
 $(document).ready(function () {
     $(".main-btn").on("click", function (){
         toggleAbout();
 
     });
-
+    
+    $(".exit").on("click", function (){
+        resetDOM();
+    });
     setTimeout(function () {
         $("#port-sec").removeAttr("class", "to-be-loaded");
     }, 2100);
@@ -64,7 +68,6 @@ const letterMagic = {
                     let boo = a.layout.join('');
                     $('#sub-name').text(boo);
                     b++;
-    
                 
                 isWordComplete = true;
 
@@ -95,12 +98,41 @@ const btnActions = {
 
 
 const toggleAbout = () => {
-    $("#front-page").addClass('back-transparent');
-    $(".about-card").addClass('move-in-left')
-    $(".contact-card").addClass('move-smooth');
-    $(".contact-card").addClass('move-in-right');
-    $(".body").addClass('stop-scroll-y');
+
+    if(hasBeenToggled){
+        $(".about-card").removeClass('back-transparent move-in-right');
+        $(".contact-card").removeClass('back-transparent move-in-left');
+        $(".about-card").addClass('back-fade-in');
+        $(".contact-card").addClass('back-fade-in');
+        hasBeenToggled = false;
+        toggleAbout();
+    }else{
+        $("#front-page").addClass('back-transparent');
+        $(".about-card").addClass('move-in-left');
+        //$(".contact-card").addClass('move-smooth');
+        $(".contact-card").addClass('move-in-right');
+        $(".body").addClass('stop-scroll-y');
+    }
+
 }
 
+const resetDOM = () => {
+    $("#front-page").removeClass('back-transparent');
+    $(".about-card").removeClass('move-in-left');
+    $(".contact-card").removeClass('move-in-right');
+    
+
+    $("#front-page").addClass('back-fade-in');
+    $(".about-card").addClass('move-in-right');
+    $(".contact-card").addClass('move-in-left');
+    $(".body").removeClass('stop-scroll-y');
+
+    $(".about-card").addClass('back-transparent');
+    $(".contact-card").addClass('back-transparent');
+
+    hasBeenToggled = true;
+
+
+}
 
 

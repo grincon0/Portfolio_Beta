@@ -179,6 +179,17 @@ p{
     height:310px;
 }
 
+.exit{
+    display:block;
+    font-family: 'Roboto', 'sans';
+    font-size: 50px;
+    font-weight: 800;
+    text-decoration: none;
+    position: relative;
+    left:90%;
+
+}
+
 
 .midfy{
     position:relative;
