@@ -93,6 +93,7 @@ p{
     position: relative;
     left: 20%;
     padding-bottom: 30px;
+    opacity: 0;
 }
 
 .port-box-cover{
@@ -207,6 +208,10 @@ p{
 
 .name-top{
     margin-top: 160px;
+}
+
+.appear-bounce{
+    animation: appear 0.5s ease-in forwards;
 }
 
 
@@ -434,6 +439,22 @@ p{
     }
 }
 
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+        transform: translateY(0px);
+    }
+    25%{
+        
+        transform: translateY(55px)
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(40px);
+
+    }
+}
 
 
 

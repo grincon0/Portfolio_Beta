@@ -10,22 +10,34 @@ const stateCheck = setInterval(function () {
 
 let hasBeenToggled = false;
 
-$(document).ready(function () {
+$(function () {
     $(".main-btn").on("click", function (){
         toggleAbout();
-
     });
-    
+
     $(".exit").on("click", function (){
         resetDOM();
     });
     setTimeout(function () {
-        $("#port-sec").removeAttr("class", "to-be-loaded");
-    }, 2100);
+        $("#port-sec").removeClass("to-be-loaded");
+    }, 2000);
+
+    
+    let $window = $(window);
+
+    $window.on('scroll', function (){
+        let div = $('.port-box')
+        let pad = Math.max(0, $window.height() - 100);
+        let scrollTop = $window.scrollTop();
+
+        if(!div.hasClass('appear-bounce') && scrollTop + pad > div.offset().top){
+            div.addClass('appear-bounce');
+            return;
+        }
+    });
 
     letterMagic.setLayout();
     letterMagic.init();
-
 });
 
 const letterMagic = {
