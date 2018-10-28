@@ -4,8 +4,7 @@
 
 @font-face{
     font-family : LeagueSpartan;
-    src: url("../fonts/LeagueSpartan-Bold.woff") format ("woff");
-    src: url("../fonts/LeagueSpartan-Bold.woff2") format ("woff2");
+    src: url("assets/fonts/leaguespartan-bold.woff2") format ("woff2");
 }
 
 
@@ -34,10 +33,16 @@ p{
     background-color: #4717F6;
 }
 
+.extra-back{
+    background-color: #799992
+}
+
 
 .font-clr{
     color: #E7DFDD;
 }
+
+
 
 .main-clr {
     background-color: #0E0B16;
@@ -167,6 +172,11 @@ p{
     z-index: 5;
 }
 
+.portfolio-head{
+    opacity: 0;
+    text-align: center;
+}
+
 .row-buffer{
     margin: 3px 3px;
 }
@@ -178,6 +188,10 @@ p{
 
 .emp-space{
     height:310px;
+}
+
+.port-emp-space{
+    height:110px;
 }
 
 .exit{
@@ -259,10 +273,12 @@ p{
 #name {
     display: block;
     color: rgb(247, 231, 228);
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Work Sans';
     font-size: 64px;
     font-weight: bold;
     font-stretch: expanded;
+    z-index:40;
+
     
 }
 
@@ -280,6 +296,7 @@ p{
 #sub-name{
     color: #dfcfcc;
     font-family: 'Barlow Condensed', sans-serif;
+    z-index:40;
     
 }
 
@@ -293,10 +310,79 @@ p{
     animation: namefade 1.2s 3s ease-out forwards;
 }
 
+#footer{
+    background-color: rgb(150, 45, 141);
+    width: 1520px;
+    height: 200px;
+}
 
+.footer-links{
+    width:100%;
+    clear: both;
+}
+.footer-links ::before{
+    clear: both;
+    background-color: #199c7e;
+}
 
+.footer-box{
+    display:block;
+    position: relative;
+    left: 29%;
+    padding-top:10px;
+    margin: 30px;
+    float: left;
+}
+
+.footer-box a {
+    display: block;
+    font-family: 'Helvetica','sans-serif';
+    position: relative;
+    color: #f3f3f3;
+    transition: all .3s ease
+}
+
+.footer-box a:before {
+    background-color: #11d1c1;
+    transition: all .25s cubic-bezier(.694,.048,.335,1) .15s
+}
+
+.footer-box a:after,.footer-box a:before {
+    content: "";
+    position: absolute;
+    top:18px;
+    right: 0;
+    left: auto;
+    width: 0;
+    height: 3px;
+    z-index: 2
+}
+
+.footer-box a:after {
+    background-color: #f2a257;
+    transition: all .25s cubic-bezier(.694,.048,.335,1)
+}
+
+.footer-box a:hover {
+    color: #f3f3f3;
+    text-decoration: none
+}
+
+.footer-box a:hover:after,.footer-box a:hover:before {
+    width:100%;
+    left: 0
+}
+
+.signature{
+    position: relative;
+    left: 42%;
+    float: left;
+    clear: both;
+    margin: auto 0;
+}
 #wrapper{
     width: 1000px;
+    z-index:39;
 }
 
 
@@ -314,6 +400,7 @@ p{
     text-decoration: none;
     padding: 8px 20px;
     transition: transform 0.5s ease;
+    z-index:40;
 }
 
 
@@ -451,10 +538,15 @@ p{
     }
     100%{
         opacity: 1;
-        transform: translateY(40px);
+        transform: translateY(35px);
 
     }
 }
+
+
+
+
+
 
 
 

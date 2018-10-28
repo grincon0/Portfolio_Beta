@@ -1,3 +1,27 @@
+
+
+let hasBeenToggled = false;
+
+$(function () {
+    $(".main-btn").on("click", function () {
+        toggleAbout();
+    });
+
+    $(".exit").on("click", function () {
+        resetDOM();
+    });
+    setTimeout(function () {
+        $("#port-sec").removeClass("to-be-loaded");
+    }, 2000);
+
+
+    bounceFadeIn('.portfolio-head');
+    bounceFadeIn('.port-box');
+
+    letterMagic.setLayout();
+    letterMagic.init();
+});
+
 const stateCheck = setInterval(function () {
     if (document.readyState !== 'complete') {
         return;
@@ -7,38 +31,6 @@ const stateCheck = setInterval(function () {
     }
 
 }, 100);
-
-let hasBeenToggled = false;
-
-$(function () {
-    $(".main-btn").on("click", function (){
-        toggleAbout();
-    });
-
-    $(".exit").on("click", function (){
-        resetDOM();
-    });
-    setTimeout(function () {
-        $("#port-sec").removeClass("to-be-loaded");
-    }, 2000);
-
-    
-    let $window = $(window);
-
-    $window.on('scroll', function (){
-        let div = $('.port-box')
-        let pad = Math.max(0, $window.height() - 100);
-        let scrollTop = $window.scrollTop();
-
-        if(!div.hasClass('appear-bounce') && scrollTop + pad > div.offset().top){
-            div.addClass('appear-bounce');
-            return;
-        }
-    });
-
-    letterMagic.setLayout();
-    letterMagic.init();
-});
 
 const letterMagic = {
     specialChars: ['▓', '▒', '░', '█', '╪', 'Ω', '█', 'Σ', '¶',
@@ -72,18 +64,18 @@ const letterMagic = {
             //set layout[a = getRndPos]
 
             if (time > 75 && (b < a.normal.length)) {
-                
-                    let word = a.normal.split("");
 
-                    a.layout[b] = word[b];
+                let word = a.normal.split("");
 
-                    let boo = a.layout.join('');
-                    $('#sub-name').text(boo);
-                    b++;
-                
+                a.layout[b] = word[b];
+
+                let boo = a.layout.join('');
+                $('#sub-name').text(boo);
+                b++;
+
                 isWordComplete = true;
 
-            } else if(isWordComplete){
+            } else if (isWordComplete) {
                 clearInterval(interval);
 
             } else {
@@ -91,7 +83,7 @@ const letterMagic = {
                     a.layout[p] = a.specialChars[a.getRndChar()];
                     let text = a.layout.join('');
                     $("#sub-name").text(text);
-                }               
+                }
             }
             time++;
         }, 45);
@@ -101,17 +93,36 @@ const letterMagic = {
 
 
 const btnActions = {
-    getCards : function () {
-        $(".main-btn").on("click", function (){
+    getCards: function () {
+        $(".main-btn").on("click", function () {
             $(".about-card").attr('class', 'move-in-left');
         });
     }
 }
 
 
+const bounceFadeIn = (selector) => {
+
+    let $window = $(window);
+
+    $window.on('scroll', function () {
+        let div = $(`${selector}`);
+        let pad = Math.max(0, $window.height() - 100);
+        let scrollTop = $window.scrollTop();
+
+        if (!div.hasClass('appear-bounce') && scrollTop + pad > div.offset().top) {
+            div.addClass('appear-bounce');
+            return;
+        }
+    });
+
+}
+
+
+
 const toggleAbout = () => {
 
-    if(hasBeenToggled){
+    if (hasBeenToggled) {
         $("#front-page").removeClass('back-fade-in');
         $(".about-card").removeClass('back-transparent move-in-right');
         $(".contact-card").removeClass('back-transparent move-in-left');
@@ -119,7 +130,7 @@ const toggleAbout = () => {
         $(".contact-card").addClass('back-fade-in');
         hasBeenToggled = false;
         toggleAbout();
-    }else{
+    } else {
         $("#front-page").addClass('back-transparent');
         $(".about-card").addClass('move-in-left');
         //$(".contact-card").addClass('move-smooth');
@@ -133,7 +144,7 @@ const resetDOM = () => {
     $("#front-page").removeClass('back-transparent');
     $(".about-card").removeClass('move-in-left');
     $(".contact-card").removeClass('move-in-right');
-    
+
 
     $("#front-page").addClass('back-fade-in');
     $(".about-card").addClass('move-in-right');
@@ -147,5 +158,7 @@ const resetDOM = () => {
 
 
 }
+
+
 
 

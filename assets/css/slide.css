@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Slab|Patua+One|Pragati+Narrow');
+
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web');
+
 .about-card{
     height: 90%;
     width: 40%;
@@ -7,6 +11,24 @@
     top: 5%;
     transition: transform 0.25s ease-in;
     z-index: 8;
+    
+}
+
+.text-content, .contact-content{
+    margin: 50px;
+}
+
+.text-content h2{
+    font-family:'Times New Roman', cursive;
+
+}
+
+
+
+.text-content p{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+
 }
 
 .contact-card{
@@ -18,6 +40,7 @@
     top: 5%;
     transition: transform 0.25s ease-in;
     z-index: 8;
+
 }
 
 
