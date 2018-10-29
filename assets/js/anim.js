@@ -1,5 +1,4 @@
 
-
 let hasBeenToggled = false;
 
 $(function () {
@@ -37,7 +36,7 @@ const letterMagic = {
         '░', 'ø', '▒', 'Γ', 'δ', 'Θ', '▒', '+', '/', '#',
         , '@', '!', '%', '░', '▓'],
     layout: [],
-    normal: 'Full Stack Developer',
+    normal: 'Full Stack Dev',
     sep: [],
     setLayout: function () {
         let word = this.normal.split("");
@@ -70,7 +69,7 @@ const letterMagic = {
                 a.layout[b] = word[b];
 
                 let boo = a.layout.join('');
-                $('#sub-name').text(boo);
+                $('#title-name').text(boo);
                 b++;
 
                 isWordComplete = true;
@@ -82,7 +81,7 @@ const letterMagic = {
                 for (let p = 0; p < a.layout.length; p++) {
                     a.layout[p] = a.specialChars[a.getRndChar()];
                     let text = a.layout.join('');
-                    $("#sub-name").text(text);
+                    $("#title-name").text(text);
                 }
             }
             time++;
@@ -124,6 +123,7 @@ const toggleAbout = () => {
 
     if (hasBeenToggled) {
         $("#front-page").removeClass('back-fade-in');
+        $(".layer").removeClass('back-fade-in')
         $(".about-card").removeClass('back-transparent move-in-right');
         $(".contact-card").removeClass('back-transparent move-in-left');
         $(".about-card").addClass('back-fade-in');
@@ -132,6 +132,7 @@ const toggleAbout = () => {
         toggleAbout();
     } else {
         $("#front-page").addClass('back-transparent');
+        $(".layer").addClass('back-transparent');
         $(".about-card").addClass('move-in-left');
         //$(".contact-card").addClass('move-smooth');
         $(".contact-card").addClass('move-in-right');
@@ -145,7 +146,7 @@ const resetDOM = () => {
     $(".about-card").removeClass('move-in-left');
     $(".contact-card").removeClass('move-in-right');
 
-
+    $('.layer').addClass('back-fade-in');
     $("#front-page").addClass('back-fade-in');
     $(".about-card").addClass('move-in-right');
     $(".contact-card").addClass('move-in-left');

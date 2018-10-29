@@ -18,12 +18,20 @@ html{
 body{
     background-color:rgb(13, 10, 20);
     overflow-x: hidden;
+    margin:0;
+    padding:0;
     
 }
 
 p{
 
     color: #E7DFDD;
+}
+
+nav{
+    position: relative;
+    top:1em;
+    right: 5%;
 }
 
 
@@ -398,9 +406,14 @@ p{
     color:#ffffff;
     margin: 20px 0;
     text-decoration: none;
+    position: relative;
+    left:25%;
+    top:2em;
     padding: 8px 20px;
     transition: transform 0.5s ease;
-    z-index:40;
+    z-index:60;
+    opacity: 0;
+    animation: shortFadeIn 1s ease 5.2s forwards;
 }
 
 
@@ -408,26 +421,7 @@ p{
 /*  Pseudo-classes */
 
 
-.main-btn::before{
-    content:"";
-    height: 80%;
-    left: 1.5%;
-    bottom: 1.5%;
-    background: linear-gradient(45deg, #ae00ff, #df0068);
-    position: absolute;
-    overflow: hidden;
-    width: 50%;
-    animation: namefade 1.26s 3s ease-out forwards;
 
-}
-.main-btn:hover{
-    border-radius: 4px;
-    transform: scale(1.11);
-    animation: gr 6s ease-out alternate infinite ;
-    -webkit-animation: gr 6s ease-out alternate infinite;
-	-moz-animation: gr 6s ease-out alternate infinite;
-
-}
 
 
 /*
@@ -540,6 +534,15 @@ p{
         opacity: 1;
         transform: translateY(35px);
 
+    }
+}
+
+@keyframes shortFadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
 
