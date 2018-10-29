@@ -9,10 +9,17 @@ $(function () {
     $(".exit").on("click", function () {
         resetDOM();
     });
+
+    $("#port-link").on("click", function () {
+        $("#port-sec").removeClass("to-be-loaded");
+        $(".footer-links").removeClass("to-be-loaded");
+    });
+
+    /*
     setTimeout(function () {
         $("#port-sec").removeClass("to-be-loaded");
     }, 2000);
-
+    */
 
     bounceFadeIn('.portfolio-head');
     bounceFadeIn('.port-box');

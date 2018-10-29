@@ -233,7 +233,7 @@ nav{
 }
 
 .appear-bounce{
-    animation: appear 0.5s ease-in forwards;
+    animation: appear 0.5s ease-in 0.45s forwards;
 }
 
 
@@ -291,14 +291,13 @@ nav{
 }
 
 #sec{
-    width: 1515px;
+    width: 1520px;
     margin:0;
     padding: 0;
     background:linear-gradient(90deg, #dadada, #e7e7e7);
 }
 
 #port-sec{
-    width: 100%;
     background:linear-gradient(90deg, #dadada, #e7e7e7);
 }
 #sub-name{
@@ -319,7 +318,8 @@ nav{
 }
 
 #footer{
-    background-color: rgb(150, 45, 141);
+    color: #0E0B16;
+    background: linear-gradient(90deg, #c5c5c5, #aaaaaa);
     width: 1520px;
     height: 200px;
 }
@@ -342,11 +342,55 @@ nav{
     float: left;
 }
 
+.nav-box{
+    display:block;
+    position: relative;
+}
+
+.nav-item{
+    display:block;
+}
+
+.nav-box a{
+    display: block;
+    transition: all .3s ease
+}
+.nav-box a:before {
+    background-color: #d11e11;
+    transition: all .25s cubic-bezier(.694,.048,.335,1) .15s
+}
+
+.nav-box a:after,.nav-box a:before {
+    content: "";
+    position: absolute;
+    top:29px;
+    right: 0;
+    left: auto;
+    width: 0;
+    height: 3px;
+    z-index: 2
+}
+
+.nav-box a:after {
+    background-color: #3244e2;
+    transition: all .25s cubic-bezier(.694,.048,.335,1)
+}
+
+.nav-box a:hover {
+    color: #f3f3f3;
+    text-decoration: none
+}
+
+.nav-box a:hover:after,.nav-box a:hover:before {
+    width:100%;
+    left:0;
+}
+
 .footer-box a {
     display: block;
     font-family: 'Helvetica','sans-serif';
     position: relative;
-    color: #f3f3f3;
+    color: #0b0b0e;
     transition: all .3s ease
 }
 
@@ -382,6 +426,7 @@ nav{
 }
 
 .signature{
+    color: #0b0b0e;
     position: relative;
     left: 42%;
     float: left;
