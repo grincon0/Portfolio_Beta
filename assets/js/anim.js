@@ -12,7 +12,10 @@ $(function () {
 
     $("#port-link").on("click", function () {
         $("#port-sec").removeClass("to-be-loaded");
+        $("#ExtraBits").removeClass("to-be-loaded");
         $(".footer-links").removeClass("to-be-loaded");
+        $(".signature").removeClass("to-be-loaded");
+        
     });
 
     /*

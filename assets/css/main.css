@@ -45,7 +45,37 @@ nav{
     background-color: #799992
 }
 
+.extra-bit-box{
+    background: linear-gradient(to right, #969696, #e6e5e5);
 
+}
+.extra-bit-preview{
+
+    position: relative;
+    border-radius: 10px;
+
+}
+
+.extra-bit-preview img{
+    border-radius: 30px;
+ margin: 20px;
+
+}
+
+.extra-bit-desc{
+    font-family: 'Helvetica', 'sans-serif';
+    color: black;
+
+}
+
+.extra-bit-desc p:nth-child(1){
+    font-weight: 600;
+    color:black;
+}
+
+.extra-bit-desc p:nth-child(2){
+    color:black;
+}
 .font-clr{
     color: #E7DFDD;
 }
@@ -233,7 +263,7 @@ nav{
 }
 
 .appear-bounce{
-    animation: appear 0.5s ease-in 0.45s forwards;
+    animation: appear 0.5s ease-in 0.5s forwards;
 }
 
 
