@@ -17,10 +17,10 @@ window.onload = function () {
 		var x = event.clientX - parallaxBox.offsetLeft,
 			y = event.clientY - parallaxBox.offsetTop;
 
-		mouseParallax('l1', c1left, c1top, x, y, 4);
-		mouseParallax('l2', c2left, c2top, x, y, 8);
-		mouseParallax('l3', c3left, c3top, x, y, 12);
-		mouseParallax('l4', c4left, c4top, x, y, 16);
+		mouseParallax('l1', c1left, c1top, x, y, 6);
+		mouseParallax('l2', c2left, c2top, x, y, 12);
+		mouseParallax('l3', c3left, c3top, x, y, 20);
+		mouseParallax('l4', c4left, c4top, x, y, 35);
 	}
 
 }
