@@ -26,7 +26,7 @@ $(function () {
 
    setClassScroll('.portfolio-head', 'appear-bounce', 0);
    setClassScroll('.port-box', 'appear-bounce', 0);
-   setClassScroll('.extra-bit-box', 'doit', 350);
+   setClassScroll('.extra-bit-box', 'doit', 380);
 
     letterMagic.setLayout();
     letterMagic.init();
@@ -139,6 +139,7 @@ const clickBundle = (selector) => {
     $(`${selector}`).on("click", function () {
         $("#port-sec").removeClass("to-be-loaded");
         $("#ExtraBits").removeClass("to-be-loaded");
+        $("#footer").removeClass("to-be-loaded");
         $(".footer-links").removeClass("to-be-loaded");
         $(".signature").removeClass("to-be-loaded");
         
