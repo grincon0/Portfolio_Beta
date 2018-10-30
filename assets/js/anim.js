@@ -1,4 +1,3 @@
-
 let hasBeenToggled = false;
 
 $(function () {
@@ -10,6 +9,10 @@ $(function () {
         resetDOM();
     });
 
+    clickBundle('#port-link');
+    clickBundle('#Extra-link');
+
+    /*
     $("#port-link").on("click", function () {
         $("#port-sec").removeClass("to-be-loaded");
         $("#ExtraBits").removeClass("to-be-loaded");
@@ -17,15 +20,13 @@ $(function () {
         $(".signature").removeClass("to-be-loaded");
         
     });
-
-    /*
-    setTimeout(function () {
-        $("#port-sec").removeClass("to-be-loaded");
-    }, 2000);
     */
 
-    bounceFadeIn('.portfolio-head');
-    bounceFadeIn('.port-box');
+
+
+   setClassScroll('.portfolio-head', 'appear-bounce', 0);
+   setClassScroll('.port-box', 'appear-bounce', 0);
+   setClassScroll('.extra-bit-box', 'doit', 350);
 
     letterMagic.setLayout();
     letterMagic.init();
@@ -110,8 +111,14 @@ const btnActions = {
 }
 
 
-const bounceFadeIn = (selector) => {
+const setClassScroll = (selector, classToAdd, buffer) => {
 
+    let effDel = buffer;
+    /*
+    if(effDel == (false || undefined || NaN)){
+        effDel = 0;
+    }
+    */
     let $window = $(window);
 
     $window.on('scroll', function () {
@@ -119,12 +126,23 @@ const bounceFadeIn = (selector) => {
         let pad = Math.max(0, $window.height() - 100);
         let scrollTop = $window.scrollTop();
 
-        if (!div.hasClass('appear-bounce') && scrollTop + pad > div.offset().top) {
-            div.addClass('appear-bounce');
+        if (!div.hasClass(`${classToAdd}`) && scrollTop + pad > (div.offset().top + effDel)) {
+            div.addClass(`${classToAdd}`);
             return;
         }
     });
 
+}
+
+const clickBundle = (selector) => {
+
+    $(`${selector}`).on("click", function () {
+        $("#port-sec").removeClass("to-be-loaded");
+        $("#ExtraBits").removeClass("to-be-loaded");
+        $(".footer-links").removeClass("to-be-loaded");
+        $(".signature").removeClass("to-be-loaded");
+        
+    });
 }
 
 

@@ -49,10 +49,41 @@ nav{
     background: linear-gradient(to right, #969696, #e6e5e5);
 
 }
+
+.extra-bit-box:before{
+    background-color: #ff0095;
+    transition: all .25s cubic-bezier(.694,.048,.335,1) .15s;
+
+}
+
+.extra-bit-box:after, .extra-bit-box:before{
+    content:"";
+    position: absolute;
+    bottom:0;
+    right: 0;
+    left:0;
+    width: 100%;
+    height:100%;
+    z-index:11;
+}
+
+.extra-bit-box:after{
+    background-color: rgb(51, 255, 0);
+    transition: all .25s cubic-bezier(.694,.048,.335,1);
+
+}
+
+
+
+.extra-bit-box.doit:after,.extra-bit-box.doit:before {
+    height:0%;
+    bottom:100%;
+}
 .extra-bit-preview{
 
     position: relative;
     border-radius: 10px;
+    border-right: #0E0B16;
 
 }
 
@@ -71,9 +102,11 @@ nav{
 .extra-bit-desc p:nth-child(1){
     font-weight: 600;
     color:black;
+    margin: 1px;
 }
 
 .extra-bit-desc p:nth-child(2){
+    font-weight: 100;
     color:black;
 }
 .font-clr{
@@ -372,9 +405,16 @@ nav{
     float: left;
 }
 
+.nav-link{
+    padding:0;
+    margin:0;
+}
+
 .nav-box{
     display:block;
     position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 .nav-item{
@@ -470,7 +510,7 @@ nav{
 
 
 .blk-test{
-    width: 1500px;
+    width: 1518px;
 
 }
 .main-btn{
