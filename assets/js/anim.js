@@ -22,7 +22,9 @@ $(function () {
     });
     */
 
-
+    let newDate = new Date();
+    let datetime = `Today is ${newDate.today}`;
+    console.log(datetime);
 
    setClassScroll('.portfolio-head', 'appear-bounce', 0);
    setClassScroll('.port-box', 'appear-bounce', 0);
