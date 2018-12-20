@@ -8,11 +8,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/load.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/slide.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/input.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/landscape.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/load.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/slide.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/input.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/landscape.css" />
 </head>
 
 <body class="body">
@@ -614,10 +614,13 @@
                         </div>
                         <div class="contact-content">
                             <h2>Contact Me</h2>
-                            <input class="form-control form-control-sm input-line " type="text" placeholder="Name">
-                            <input class="form-control form-control-sm input-line  " type="text" placeholder="Email">
-                            <input class="form-control form-control-sm input-line  " type="text" placeholder="Message">
-                            <button type="button" class="btn">Send Message</button>
+                            <form action="contactform.php" method="POST">
+                                <input class="form-control form-control-sm input-line" type="text" name="name" placeholder="Your name">
+                                <input class="form-control form-control-sm input-line" type="text" name="email"
+                                    placeholder="Email">
+                                <textarea class="form-control form-control-sm input-line textA" type="text" name="message" placeholder="Business inquiries? Need a new team member? Coffee? Leave me a message :)"></textarea>
+                                <button type="submit" class="submit btn">Send Message</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -674,6 +677,31 @@
                 </div>
 
             </div>
+            <div class="row row-buffer">
+                <div class="col ">
+                    <div class="port-box port-overlap pet-perfectDiv test-6">
+
+                        <a href="https://pet-perfect.herokuapp.com/index.html">
+                            <div class="port-box-cover">
+
+                            </div>
+                        </a>
+
+                        <div class="port-div">
+                            <h1 class="port-title">Pixel Smash</h2>
+                                <br>
+                                <p class="port-desc">Test your might against other players or the CPU...</p> 
+                                <p class="port-desc">...in this Javascript-powered platform fighter!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="port-emp-space"></div>
+                </div>
+
+            </div>
 
         </div>
 
@@ -710,7 +738,7 @@
                         </div>
 
                     </div>
-                    
+
                     <div class="col extra-bit-box">
                         <div>
                             <div class="extra-bit-preview">
@@ -760,15 +788,15 @@
         crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
         crossorigin="anonymous"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/anim.js"></script>
-    <script src="assets/js/parallax.js"></script>
+    <script src="./assets/js/app.js"></script>
+    <script src="./assets/js/anim.js"></script>
+    <script src="./assets/js/parallax.js"></script>
 </body>
 
 </html>
 
 
-<!--Scripts-->
+<!-- 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.5.1/snap.svg.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
@@ -776,9 +804,9 @@
     crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
-<script src="assets/js/app.js"></script>
-<script src="assets/js/anim.js"></script>
-<script src="assets/js/parallax.js"></script>
+<script src="../assets/js/app.js"></script>
+<script src="../assets/js/anim.js"></script>
+<script src="../assets/js/parallax.js"></script>
 </body>
 
-</html>
+</html> -->

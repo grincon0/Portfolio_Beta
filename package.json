@@ -1,0 +1,27 @@
+{
+  "name": "nodeJsPortfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grincon0/Portfolio_Beta.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grincon0/Portfolio_Beta/issues"
+  },
+  "homepage": "https://github.com/grincon0/Portfolio_Beta#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "moment": "^2.23.0",
+    "nodemailer": "^4.7.0",
+    "path": "^0.12.7"
+  }
+}

@@ -495,6 +495,10 @@ nav{
     left: 0
 }
 
+.textA{
+    height: 400px;
+}
+
 .signature{
     color: #0b0b0e;
     position: relative;
