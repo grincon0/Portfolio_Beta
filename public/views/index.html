@@ -614,10 +614,12 @@
                         </div>
                         <div class="contact-content">
                             <h2>Contact Me</h2>
-                            <form action="contactform.php" method="POST">
+                            <form action="/api/mail" method="POST">
                                 <input class="form-control form-control-sm input-line" type="text" name="name" placeholder="Your name">
                                 <input class="form-control form-control-sm input-line" type="text" name="email"
                                     placeholder="Email">
+                                    <input class="form-control form-control-sm input-line" type="text" name="subject"
+                                    placeholder="Subject">
                                 <textarea class="form-control form-control-sm input-line textA" type="text" name="message" placeholder="Business inquiries? Need a new team member? Coffee? Leave me a message :)"></textarea>
                                 <button type="submit" class="submit btn">Send Message</button>
                             </form>

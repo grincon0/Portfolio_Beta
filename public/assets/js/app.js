@@ -36,19 +36,25 @@ const skyChange = {
             console.log('this is n', n);
             console.log(typeof n);
 
-            if(n == 1){
+            if (n == 1) {
                 t = '#000000';
                 m = '#000621';
                 b = '#03135b';
-            }else if(n == 2){
+            } else if (n == 2) {
                 t = '#000000';
                 m = '#000621';
                 b = '#2e0447';
-            }else if(n == 3){
+            } else if (n == 3) {
                 t = '#000000';
                 m = '#0c0014';
                 b = '#6b4610';
             }
+            else if (n == 4) {
+                t = '#000000';
+                m = '#605c56';
+                b = '#000000';
+            }
+
             else if (n == 6) {
                 t = '#020023';
                 m = '#230023';
