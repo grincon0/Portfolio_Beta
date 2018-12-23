@@ -266,6 +266,7 @@ nav{
 }
 
 .exit{
+    color: #cce0db;
     display:block;
     font-family: 'Roboto', 'sans';
     font-size: 50px;
@@ -274,6 +275,10 @@ nav{
     position: relative;
     left:90%;
 
+}
+
+.conCol{
+    color:#cce0db;
 }
 
 

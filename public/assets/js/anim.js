@@ -32,6 +32,11 @@ $(function () {
 
     letterMagic.setLayout();
     letterMagic.init();
+
+    setTimeout(function(){
+        fontColor();
+    },1250)
+    
 });
 
 const stateCheck = setInterval(function () {
@@ -189,6 +194,16 @@ const resetDOM = () => {
     hasBeenToggled = true;
 
 
+}
+
+function fontColor (){
+    let hour = parseInt(skyChange.getTime());
+    if( 7 <= hour && hour <= 18){
+        $('nav-link').addClass('day-letter')
+
+    }else{
+        $('nav-link').removeClass('day-letter');
+    }
 }
 
 

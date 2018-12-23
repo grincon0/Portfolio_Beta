@@ -101,6 +101,10 @@ nav{
     background: #b0baba;
     opacity: 0.2;
 }
+
+.day-letter{
+    color: #101029;
+}
 .skyscrape{
     display:block;
     position: absolute;

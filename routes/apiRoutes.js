@@ -20,11 +20,12 @@ module.exports = function (app) {
     app.post("/api/mail", function (req, res) {
             sender(req);
 
+
         
             // create reusable transporter object using the default SMTP transpor
             // setup email data with unicode symbols
- 
-        });
+       
+        })
 
         //res.sendFile(path.join(__dirname, "../public/views/index.html"));
    
