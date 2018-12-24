@@ -410,6 +410,8 @@ nav{
     float: left;
 }
 
+
+
 .nav-link{
     padding:0;
     margin:0;
@@ -430,6 +432,8 @@ nav{
     display: block;
     transition: all .3s ease
 }
+
+/* Silde in effect START*/
 .nav-box a:before {
     background-color: #d11e11;
     transition: all .25s cubic-bezier(.694,.048,.335,1) .15s
@@ -460,6 +464,8 @@ nav{
     width:100%;
     left:0;
 }
+
+/* Silde in effect END*/
 
 .footer-box a {
     display: block;
