@@ -34,8 +34,6 @@ $(function () {
     letterMagic.init();
 
     
-        //fontColor();
-    
     
 });
 
@@ -200,10 +198,10 @@ function fontColor (){
     let hour = parseInt(skyChange.getTime());
     console.log(hour);
     if( 7 <= hour && hour <= 18){
-        $('nav-link').addClass('day-letter')
+        $('.nav-link').addClass('day-letter')
 
     }else{
-        $('nav-link').removeClass('day-letter');
+        $('.nav-link').removeClass('day-letter');
     }
 }
 
