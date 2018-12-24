@@ -8,7 +8,17 @@ $(document).ready(function () {
         }).then((res) => {
             location.reload();
         }) */
-    skyChange.getTime().then(skyChange.getAdjust).then(skyChange.changeSky);
+    skyChange.getTime().then(skyChange.getAdjust).then(skyChange.changeSky, function(){
+        let hour = parseInt(skyChange.getTime());
+        console.log(hour);
+        if( 7 <= hour && hour <= 18){
+            $('nav-link').addClass('day-letter')
+    
+        }else{
+            $('nav-link').removeClass('day-letter');
+            console.log('menu font is light');
+        }
+    });
 
 });
 
@@ -23,6 +33,7 @@ const skyChange = {
                 resolve(data);
             });
         })
+
 
         return promise;
 
