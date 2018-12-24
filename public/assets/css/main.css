@@ -140,7 +140,7 @@ nav{
 
 
 .pet-perfectDiv{
-    background-image: url('../img/pet-perfect/adults.jpg');
+    background-image: url('../img/pet-perfect/petPerf.png');
     background-repeat: no-repeat;
     background-size: cover;
 }
@@ -279,7 +279,13 @@ nav{
     text-decoration: none;
     position: relative;
     left:90%;
+    transition: all .4s ease
 
+}
+
+.exit:hover{
+    font-size:65px;
+    color: rgb(165, 4, 4);
 }
 
 .conCol{
@@ -566,7 +572,7 @@ nav{
 */
 
 .port-box:hover .port-box-cover{
-    width: 100%;
+    width: 101%;
     /*
     animation: slideright  0.3s forwards;   
     */ 
@@ -678,6 +684,17 @@ nav{
     }
     to{
         opacity: 1;
+    }
+}
+
+@keyframes exit{
+    from{
+        color:white;
+        transform: scale(1.0);
+    }
+    to{
+        color:rgb(184, 0, 0);
+        transform: scale(1.2);
     }
 }
 
