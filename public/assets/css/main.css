@@ -144,6 +144,11 @@ nav{
     background-repeat: no-repeat;
     background-size: cover;
 }
+.pixelDiv{
+    background-image: url('../img/psDemob.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /*
 .port-title, .port-desc, .port-num{
